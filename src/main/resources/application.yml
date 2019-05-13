@@ -1,16 +1,11 @@
 spring:
   application:
-    name: axon-geode
+    name: kotlin-geode
   main:
     lazy-initialization: true
-  # Database
-  h2:
-    console:
-      enabled: true
-  datasource:
-    url: jdbc:h2:file:./target/h2
-    username: sa
-    password:
-    driver-class-name: org.h2.Driver
-  jpa:
-    generate-ddl: true
+
+  data.gemfire.cache.name: ${random.value}
+  data.gemfire.cache.server.port: 0
+
+
+
