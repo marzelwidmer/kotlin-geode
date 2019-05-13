@@ -1,4 +1,4 @@
-package ch.keepcalm.kotlingeode.locator
+package ch.keepcalm.geodserver.locator
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
