@@ -1,0 +1,4 @@
+include::docs/modules/ROOT/pages/index.adoc[]
+
+
+
