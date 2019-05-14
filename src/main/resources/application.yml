@@ -4,8 +4,24 @@ spring:
   main:
     lazy-initialization: true
 
-  data.gemfire.cache.name: ${random.value}
-  data.gemfire.cache.server.port: 0
 
-
-
+---
+## Locator
+spring:
+  profiles:
+    active: locator
+  data:
+    gemfire:
+      cache:
+        name: ${random.value}
+        server:
+          port: 0
+---
+## Client
+spring:
+  profiles:
+    active: client
+  data:
+    gemfire:
+      pool:
+        locators: localhost[10334]

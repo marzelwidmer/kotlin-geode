@@ -1,4 +1,4 @@
-package ch.keepcalm.geodserver.locator
+package ch.keepcalm.geode.locator
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -15,8 +15,8 @@ class LocatorApplication
 @Configuration
 @EnableLocator
 @EnableManager(start = true)
-@Profile("!clustered")
-internal class LonerConfiguration
+@Profile(value = ["locator"])
+internal class LcatorConfiguration
 
 fun main(args: Array<String>) {
     runApplication<LocatorApplication>(*args)
